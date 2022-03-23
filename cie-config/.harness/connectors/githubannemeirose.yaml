@@ -1,0 +1,23 @@
+connector:
+  name: github-annemeirose
+  identifier: githubannemeirose
+  description:
+  orgIdentifier: default
+  projectIdentifier: bootcampcianne
+  type: Github
+  spec:
+    url: https://github.com/annemeirose
+    validationRepo: harness-cie-lab
+    authentication:
+      type: Http
+      spec:
+        type: UsernameToken
+        spec:
+          username: annemeirose
+          tokenRef: annegitcielab
+    apiAccess:
+      type: Token
+      spec:
+        tokenRef: annegitcielab
+    executeOnDelegate: true
+    type: Account
